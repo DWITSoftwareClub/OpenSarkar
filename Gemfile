@@ -10,6 +10,13 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+gem 'devise'
+gem 'twitter-bootstrap-rails'
+gem 'therubyracer'
+gem 'activeadmin', github: 'activeadmin'
+
 
 group :development, :test do
   gem 'byebug'
