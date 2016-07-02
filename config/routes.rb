@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :replycomments
+  resources :sarkarreplies
+  resources :comments
+  resources :problems
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

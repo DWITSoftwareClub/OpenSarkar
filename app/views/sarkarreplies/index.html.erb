@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sarkarreplies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reply</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sarkarreplies.each do |sarkarreply| %>
+      <tr>
+        <td><%= sarkarreply.reply %></td>
+        <td><%= link_to 'Show', sarkarreply %></td>
+        <td><%= link_to 'Edit', edit_sarkarreply_path(sarkarreply) %></td>
+        <td><%= link_to 'Destroy', sarkarreply, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sarkarreply', new_sarkarreply_path %>

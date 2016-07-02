@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Replycomments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Comment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @replycomments.each do |replycomment| %>
+      <tr>
+        <td><%= replycomment.comment %></td>
+        <td><%= link_to 'Show', replycomment %></td>
+        <td><%= link_to 'Edit', edit_replycomment_path(replycomment) %></td>
+        <td><%= link_to 'Destroy', replycomment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Replycomment', new_replycomment_path %>
