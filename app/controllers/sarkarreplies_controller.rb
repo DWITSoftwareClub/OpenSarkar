@@ -1,5 +1,6 @@
 class SarkarrepliesController < ApplicationController
   before_action :set_sarkarreply, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin_user!, only: [:new] 
 
   # GET /sarkarreplies
   # GET /sarkarreplies.json
