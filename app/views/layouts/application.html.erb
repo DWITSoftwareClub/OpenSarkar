@@ -7,8 +7,56 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="navi">
+      <ul class="navigation w3-navbar">
+        
+        <li class="w3-hide-medium w3-hide-large w3-opennav w3-center">
+          <label class="menu">MENU<a href="javascript:void(0);" onclick="myFunction()" class="ham-nav">&#9776;</a></label>
+        </li>
+
+        <li class="w3-hide-small nav-col"><a href="<%=static_pages_about_path%>">About</a></li>
+        <li class="w3-hide-small nav-col"><a href="<%=problems_path%>">Complaints</a>
+        <li class="w3-hide-small nav-col"><a href="<%=suggestions_path%>">Suggestions</a></li>
+        <%if user_signed_in? %>
+        <li class="right-item"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+        <% else %>
+        <li class="right-item"><a id="a" href="<%=new_user_session_path%>">Login</a></li>
+        <li class="right-item"><a id="a" href="<%=new_user_registration_path%>">Sign Up</a></li>
+        <% end %>
+      </ul>
+
+      <div id="demo" class="w3-hide w3-hide-large">
+        
+        <ul class="open w3-navbar">
+          <li><a href="<%=static_pages_about_path%>">About</a></li>
+          <li><a href="<%=problems_path%>">Complaints</a></li>
+          <li><a href="<%=suggestions_path%>">Suggestions</a></li>
+          <hr class="menu-hr">
+          <%if user_signed_in? %>
+        <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+        <% else %>
+        <li><a id="a" href="<%=new_user_session_path%>">Login</a></li>
+        <li><a id="a" href="<%=new_user_registration_path%>">Sign Up</a></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+
+
+    
+
+<div class="w3-container row">    
 
 <%= yield %>
+</div>
 
+
+<div class="w3-container footer">
+        &copy 2016. All Rights Reserved. HOLD THE CODE
+        <hr>
+        <div class="footer-navi">
+          <a href="<%=static_pages_about_path%>">About</a> | <a href="<%=problems_path%>">Complaints</a> | <a href="<%=suggestions_path%>">Suggestions</a>
+        </div>
+      </div>
 </body>
 </html>

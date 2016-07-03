@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :suggestions
+  get 'static_pages/about'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users
@@ -10,7 +13,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'problems#index'
+  root 'static_pages#about'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
