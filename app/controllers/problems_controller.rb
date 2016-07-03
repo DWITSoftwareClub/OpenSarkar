@@ -1,6 +1,6 @@
 class ProblemsController < ApplicationController
   before_action :set_problem, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new] 
+  before_action :authenticate_user!
 
 
   # GET /problems
