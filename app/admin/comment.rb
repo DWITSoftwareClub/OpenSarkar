@@ -6,7 +6,7 @@ ActiveAdmin.register Comment, as: "UserComment" do
     	column :user
     	column :body
     	column :created_at
-    	default_actions
+    	actions
   	end
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

@@ -20,7 +20,14 @@
         <td><%= link_to 'Edit', edit_problem_path(problem) %></td>
         <td><%= link_to 'Destroy', problem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-      
+      <tr>
+        <td><%=link_to 'View Comments', comments_path %></td>
+        <td><%=link_to 'View Sarkar Reply', sarkarreplies_path %></td>
+        <td>
+          <hr>
+        </td>
+      </tr>
+
     <% end %>
 
   </tbody>
